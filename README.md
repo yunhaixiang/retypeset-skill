@@ -19,7 +19,7 @@ An AI-agent skill for recreating mathematical scans, photos, and PDFs as visuall
 
 ## Why Retypeset?
 
-Most mathematical document conversions optimize for text extraction. Retypeset optimizes for the finished page: its hierarchy, notation, spacing, columns, theorem environments, hyperlinks, and overall typographic character.
+Retypeset turns scanned mathematics into clean, publication-ready LaTeX—capturing the equations, theorem structure, cross-references, and typographic rhythm that ordinary text extraction leaves behind.
 
 It tells an agent to:
 
