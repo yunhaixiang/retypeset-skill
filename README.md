@@ -4,7 +4,7 @@
 
 ### Turn document references into polished, editable LaTeX.
 
-An AI-agent skill for recreating scans, photos, and PDFs as visually faithful LaTeX projects.
+An AI-agent skill for recreating mathematical scans, photos, and PDFs as visually faithful LaTeX projects.
 
 ![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Compatible-3B82F6?style=flat-square)
 ![Output](https://img.shields.io/badge/Output-LaTeX-008080?style=flat-square)
@@ -19,7 +19,7 @@ An AI-agent skill for recreating scans, photos, and PDFs as visually faithful La
 
 ## Why Retypeset?
 
-Most document conversions optimize for text extraction. Retypeset optimizes for the finished page: its hierarchy, spacing, columns, tables, headers, footers, and overall typographic character.
+Most mathematical document conversions optimize for text extraction. Retypeset optimizes for the finished page: its hierarchy, notation, spacing, columns, theorem environments, hyperlinks, and overall typographic character.
 
 It tells an agent to:
 
@@ -60,28 +60,28 @@ Codex and Claude Code use the canonical [`SKILL.md`](SKILL.md); Cursor reads [`A
 ## How it works
 
 ```text
-Reference document
+Stage 1: Preprocess the source
        │
        ▼
-Inspect layout and extract text
+Render pages, index the book, and create the LaTeX scaffold
        │
        ▼
-Build semantic, editable LaTeX
+Stage 2: Transcribe one user-requested chunk
        │
        ▼
-Compile and render
+Compile, compare, and audit that chunk
        │
        ▼
-Compare with the reference and refine
+Stage 3: Audit one user-requested completed chunk
 ```
 
-The agent selects the LaTeX engine based on the document's actual needs, keeps dependencies practical, and records any nonstandard build requirement.
+The agent does not advance to the next chapter or stage unless the user requests it. It selects the LaTeX engine based on the document's actual needs, keeps dependencies practical, and records any nonstandard build requirement.
 
 ## Example prompt
 
 > Use the Retypeset skill to recreate the attached document as a LaTeX project. Preserve the text and page layout. Use `main.tex` as the entry point, compile it, and include the compiled PDF for comparison. Flag any text that cannot be read reliably.
 
-For the most faithful result, supply every page of the source and specify any required document class, TeX engine, fonts, bibliography format, or allowed OCR cleanup.
+For the most faithful result, supply every page of the source and specify any required document class, TeX engine, fonts, and bibliography format. Retypeset uses direct visual inspection and never uses OCR.
 
 ## Expected output
 
@@ -110,6 +110,9 @@ Visual verification requires both a LaTeX compiler and a way to render PDFs. If 
 ├── SKILL.md            # Canonical skill instructions
 ├── AGENTS.md           # Project-instruction discovery entry
 ├── assets/              # README example images
+├── references/
+│   ├── style.md         # Mandatory mathematical typesetting conventions
+│   └── book-workflow.md # Staged preprocessing, transcription, and audit workflow
 └── agents/openai.yaml  # Optional Codex/OpenAI UI metadata
 ```
 
