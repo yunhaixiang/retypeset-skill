@@ -8,8 +8,8 @@ An AI-agent skill for recreating scans, photos, and PDFs as visually faithful La
 
 ![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Compatible-3B82F6?style=flat-square)
 ![Output](https://img.shields.io/badge/Output-LaTeX-008080?style=flat-square)
-![Source](https://img.shields.io/badge/Source-Editable-16A34A?style=flat-square)
-![Made with Codex](https://img.shields.io/badge/Made%20with-Codex-5B21B6?style=flat-square)
+![Works with](https://img.shields.io/badge/Works%20with-Codex%20%C2%B7%20Claude%20Code%20%C2%B7%20Cursor-7C3AED?style=flat-square)
+[![License: MIT](https://img.shields.io/badge/License-MIT-F59E0B?style=flat-square)](LICENSE)
 
 [Quick start](#quick-start) · [How it works](#how-it-works) · [Example prompt](#example-prompt) · [Compatibility](#compatibility)
 
@@ -28,6 +28,15 @@ It tells an agent to:
 - return editable `.tex` source, not only a PDF; and
 - compile and compare the result with the reference whenever the environment allows it.
 
+## Before & after
+
+<p align="center">
+  <img src="assets/before.png" alt="Scanned mathematical document used as the reference" width="49%">
+  <img src="assets/after.png" alt="Clean LaTeX reconstruction of the mathematical document" width="49%">
+</p>
+
+<p align="center"><em>Reference scan (left) → editable LaTeX reconstruction (right)</em></p>
+
 ## Quick start
 
 Clone the skill repository:
@@ -40,11 +49,13 @@ Then use the integration your agent supports:
 
 | Agent setup | Use it this way |
 | --- | --- |
-| Skill-aware | Register the repository as a `SKILL.md` skill. |
-| Project-instruction based | Keep the repository in the project, or copy [`SKILL.md`](SKILL.md) into the agent's instruction file. |
+| Codex | Register the repository as a `SKILL.md` skill. |
+| Claude Code | Install the repository as a custom `SKILL.md` skill. |
+| Cursor | Keep the repository in the project so Cursor reads the root [`AGENTS.md`](AGENTS.md). |
+| Other project-instruction agents | Copy [`SKILL.md`](SKILL.md) into the agent's instruction file. |
 | Chat based | Attach or paste [`SKILL.md`](SKILL.md) together with the reference document. |
 
-[`AGENTS.md`](AGENTS.md) is included as a small discovery entry for agents that look for project-level instructions.
+Codex and Claude Code use the canonical [`SKILL.md`](SKILL.md); Cursor reads [`AGENTS.md`](AGENTS.md), which points back to the same instructions.
 
 ## How it works
 
@@ -98,9 +109,14 @@ Visual verification requires both a LaTeX compiler and a way to render PDFs. If 
 .
 ├── SKILL.md            # Canonical skill instructions
 ├── AGENTS.md           # Project-instruction discovery entry
+├── assets/              # README example images
 └── agents/openai.yaml  # Optional Codex/OpenAI UI metadata
 ```
 
 ## Contributing
 
 The skill's behavior lives in [`SKILL.md`](SKILL.md). Keep changes focused on guidance that improves document-to-LaTeX fidelity or makes the workflow more reliable across agent environments.
+
+## License
+
+Distributed under the [MIT License](LICENSE).
