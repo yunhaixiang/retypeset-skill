@@ -1,0 +1,3 @@
+interface:
+  display_name: "Retypeset"
+  short_description: "Recreate references as editable LaTeX"
