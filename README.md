@@ -6,6 +6,11 @@
 
 An AI-agent skill for recreating scans, photos, and PDFs as visually faithful LaTeX projects.
 
+![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Compatible-3B82F6?style=flat-square)
+![Output](https://img.shields.io/badge/Output-LaTeX-008080?style=flat-square)
+![Source](https://img.shields.io/badge/Source-Editable-16A34A?style=flat-square)
+![Made with Codex](https://img.shields.io/badge/Made%20with-Codex-5B21B6?style=flat-square)
+
 [Quick start](#quick-start) · [How it works](#how-it-works) · [Example prompt](#example-prompt) · [Compatibility](#compatibility)
 
 </div>
