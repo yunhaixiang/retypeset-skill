@@ -30,12 +30,37 @@ It tells an agent to:
 
 ## Before & after
 
-<p align="center">
-  <img src="assets/before.png" alt="Scanned mathematical document used as the reference" width="49%">
-  <img src="assets/after.png" alt="Clean LaTeX reconstruction of the mathematical document" width="49%">
-</p>
+Each example pairs the visual source with its editable LaTeX reconstruction.
 
-<p align="center"><em>Reference scan (left) → editable LaTeX reconstruction (right)</em></p>
+### 01 · Genus zero
+
+<table>
+  <thead><tr><th>Reference scan</th><th>LaTeX reconstruction</th></tr></thead>
+  <tbody><tr>
+    <td><img src="assets/before.png" alt="Source scan for a theorem on genus zero"></td>
+    <td><img src="assets/after.png" alt="LaTeX reconstruction of a theorem on genus zero"></td>
+  </tr></tbody>
+</table>
+
+### 02 · ℓ-adic representations
+
+<table>
+  <thead><tr><th>Reference scan</th><th>LaTeX reconstruction</th></tr></thead>
+  <tbody><tr>
+    <td><img src="assets/before2.png" alt="Source scan defining an ell-adic representation"></td>
+    <td><img src="assets/after2.png" alt="LaTeX reconstruction defining an ell-adic representation"></td>
+  </tr></tbody>
+</table>
+
+### 03 · Dualizing complexes and local duality
+
+<table>
+  <thead><tr><th>Reference scan</th><th>LaTeX reconstruction</th></tr></thead>
+  <tbody><tr>
+    <td><img src="assets/before3.png" alt="Source scan on dualizing complexes and local duality"></td>
+    <td><img src="assets/after3.png" alt="LaTeX reconstruction on dualizing complexes and local duality"></td>
+  </tr></tbody>
+</table>
 
 ## Quick start
 
